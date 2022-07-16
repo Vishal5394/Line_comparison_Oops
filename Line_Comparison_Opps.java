@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Line_Comparison_Opps {
 	
-	static int x1, x2, y1,y2;
+	static int x1, x2, x3, x4, y1, y2, y3, y4 ;
+	static double length_1,length_2;
 	 
 	    void Welcome () {
 			System.out.println("Welcome to Line Comparison Computation");
@@ -18,14 +19,29 @@ public class Line_Comparison_Opps {
 	        System.out.println("Enter co-ordinates of x2 and y2");
 	         x2 = sc.nextInt();
 	         y2 = sc.nextInt();
+	         System.out.println("Enter co-ordinates of x3 and y3");
+	         x3 = sc.nextInt();
+	         y3 = sc.nextInt();
+	         System.out.println("Enter co-ordinates of x4 and y4");
+	         x4 = sc.nextInt();
+	         y4 = sc.nextInt();
 	       
 	    }
         
 	void Length() {
-			double length = Math.sqrt((Math.pow(x2-x1, 2)) +(Math.pow (y2-y1, 2)));
-			 System.out.println("Length of line = " + length );
-			
+			length_1 = Math.sqrt((Math.pow(x2-x1, 2)) +(Math.pow (y2-y1, 2)));
+			 System.out.println("Length of line 1 = " + length_1);
+			  length_2 = Math.sqrt((Math.pow(x4-x3, 2)) +(Math.pow (y4-y3, 2)));
+			 System.out.println("Length of line 2 = " + length_2);
 	  
+	}
+	
+	void equality() {
+		if (length_1 == length_2) 
+            System.out.println("Lines are equal");
+         else 
+            System.out.println("Lines are not equal");
+        
 	}
 public static void main(String[] args) {
 	
@@ -33,5 +49,6 @@ public static void main(String[] args) {
 	obj.Welcome();
 	obj.lengthValue();
 	obj.Length();
+	obj.equality();
 }
 }
