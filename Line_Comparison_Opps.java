@@ -36,19 +36,20 @@ public class Line_Comparison_Opps {
 	  
 	}
 	
-	void equality() {
-		if (length_1 == length_2) 
+	public void checkRelation() {
+        if (length_1 == length_2) 
             System.out.println("Lines are equal");
+         else if (length_1 > length_2) 
+            System.out.println("line 1 is greater than line 2");
          else 
-            System.out.println("Lines are not equal");
-        
-	}
+            System.out.println("Line 1 is less than line 2");
+        }
 public static void main(String[] args) {
 	
 	Line_Comparison_Opps obj = new Line_Comparison_Opps();
 	obj.Welcome();
 	obj.lengthValue();
 	obj.Length();
-	obj.equality();
+	obj.checkRelation();
 }
 }
